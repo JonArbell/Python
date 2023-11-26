@@ -42,12 +42,18 @@ class timeRecord:
     def viewEmployee(self):
         position = ""
         department = ""
-        if self.getPosition() == 1 and self.getDepartment() == 1:
-            position = "Full-Time"
+        if self.getDepartment() == 1:
             department = "Faculty"
+            if self.getPosition() == 1:
+                position = "Full-Time"
+            else:
+                position = "Part-Time"
         else:
-            position = "Part-Time"
             department = "Non Faculty"
+            if self.getPosition() == 1:
+                position = "Full-Time"
+            else:
+                position = "Part-Time"
         print(f">> Employee Details\nFirst Name: {self.getFirstName()}\nLast Name: {self.getLastName()}\nDepartment: {department}\nPosition: {position}\n")
         self.getTimeKeepingEntries()
     def getTimeKeepingEntries(self):
