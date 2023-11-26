@@ -22,7 +22,6 @@ class timeRecord:
     def setFirstName(self,firstName):
         self.__firstName = firstName
 
-
     def setLastName(self,lastName):
         self.__lastName = lastName
 
@@ -56,14 +55,17 @@ class timeRecord:
                 position = "Part-Time"
         print(f">> Employee Details\nFirst Name: {self.getFirstName()}\nLast Name: {self.getLastName()}\nDepartment: {department}\nPosition: {position}\n")
         self.getTimeKeepingEntries()
+        
     def getTimeKeepingEntries(self):
         for datePeriod, values in self.__datePeriod.items():
             print(f">> Timekeeping Entries\nDate Period: {datePeriod}\nTotal # of Hours Worked: {values[0]}\nTotal # of Absences: {values[1]}\n")
+            
     def getAbsences(self):
         absent = 0
         for absence in self.__absences:
             absent+=absence
         return int(absent)
+        
     def getWorkHour(self):
         workHour = 0
         for work in self.__workHour:
@@ -72,19 +74,21 @@ class timeRecord:
 
     def getID(self):
         return self.__id
+        
     def getPosition(self):
         return self.__position
+        
     def getDepartment(self):
         return self.__department
+        
     def getFirstName(self):
         return self.__firstName
+        
     def getLastName(self):
         return self.__lastName
 
     def setTimeKeepingEntries(self,dateEntry,workHour,absences):
-
         self.__datePeriod[dateEntry] = workHour,absences
-
 
 local_timezone = pytz.timezone('Asia/Manila')
 
