@@ -100,9 +100,11 @@ listOfEmployee=[]
 
 while(True):
     try:
+        
         print(f"========== CC03 DAILY-TIME RECORD SYSTEM ==========\n                                {formatted_local_time}")
         print(f"1. TIMEKEEPING\n2. REGISTER EMPLOYEE\n3. VIEW EMPLOYEE\n4. EXIT\n")
         pick=int(input("Enter your choice here: "))
+        
         if pick == 1:
             while True:
                 done = False
@@ -204,6 +206,7 @@ while(True):
                     break
                 elif done:
                     break
+                    
         elif pick == 2:
             print(f"========== REGISTER EMPLOYEE ==========\n                                {formatted_local_time}\n(Enter 'E' if Exit)\n>> Employee Details")
             while(True):
@@ -329,10 +332,13 @@ while(True):
                         print("ID should not have any characters.\n")
                 if done:
                     break
+                    
         elif pick == 4:
             print("GOODBYE!")
             break
+            
         else:
             print("Invalid Input.\n")
+            
     except:
         print("Please numeric input only.\n")
