@@ -48,7 +48,7 @@ class timeRecord:
             else:
                 position = "Part-Time"
         else:
-            department = "Non Faculty"
+            department = "Non-Faculty"
             if self.getPosition() == 1:
                 position = "Full-Time"
             else:
@@ -264,7 +264,7 @@ while(True):
                     convertDepartment = ""
                     while True:
                         try:
-                            department = input("Enter your Department (1. Faculty) (2. Non Faculty): ")
+                            department = input("Enter your Department (1. Faculty) (2. Non-Faculty): ")
                             if department.upper() == 'E':
                                 convertDepartment = 'E'
                                 break
@@ -272,7 +272,7 @@ while(True):
                                 convertDepartment = int(department)
                                 break
                             else:
-                                print("Invalid input. Please enter either '1' for Faculty, '2' for Non Faculty, or 'E' to exit.\n")
+                                print("Invalid input. Please enter either '1' for Faculty, '2' for Non-Faculty, or 'E' to exit.\n")
                         except Exception as e:
                             print("Please enter valid information.\n")
                     if convertDepartment == 'E':
@@ -294,6 +294,7 @@ while(True):
                             print("Please enter valid information.\n")
                     if convertPosition == 'E':
                         break
+                        
                     listOfEmployee.append(timeRecord(convertIdReg,firstName, lastName, convertDepartment, convertPosition))
                     break
 
